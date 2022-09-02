@@ -359,6 +359,7 @@ then
   # Based on the `brew` command being in /opt we assume that this is it
   if [[ -f "/opt/homebrew/bin/brew" ]]
   then
+    echo 'hello world'
     # add homebrew to shell profile because /opt is not on the default path
     homebrew_in_zprofile=$(grep "/opt/homebrew/bin/brew" ~/.zprofile 2> /dev/null | grep -v "^\s*#")
     homebrew_in_zshrc=$(grep "/opt/homebrew/bin/brew" ~/.zshrc 2> /dev/null | grep -v "^\s*#")
